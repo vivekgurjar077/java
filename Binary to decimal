@@ -1,0 +1,27 @@
+import java.util.Scanner;
+import java.util.*;
+public class Main
+{
+  public static void main (String[]args)
+  {
+    Scanner scan = new Scanner (System.in);
+        System.out.println("Enter Binary Number:");
+        int binary = scan.nextInt(),c,i;
+        int binary_a=binary;
+        double sum=0;
+        int len=0;
+        while(binary_a!=0){
+            binary_a=binary_a/10;
+            ++len;
+        }
+        for(i=0;i<len;i++)
+        {
+            c=binary%10;
+            double power=Math.pow(2,i);
+            double multi=c*power;
+            sum=sum+multi;
+            binary=binary/10;
+        }
+        System.out.println("decimal Number:"+sum);
+  }
+}
