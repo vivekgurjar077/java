@@ -1,0 +1,19 @@
+import java.util.*;
+public class length_last_word {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String s=sc.nextLine();
+        s=s.trim(); // removes whitespace from both ends of a string.
+        
+        int count=0,i=0;
+        while(i<s.length()){
+            if(s.charAt(i)==' '){
+                count=0;
+            }
+            else
+                count++;
+            i++;
+        }
+        System.out.println(count);
+    }
+}
