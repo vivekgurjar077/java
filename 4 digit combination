@@ -1,0 +1,27 @@
+import java.util.*;
+public class combination
+ {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+	    int[] arr={1,2,3,4};
+	    int n=arr.length; // finding the length of arr.
+	    for(int i=0;i<n;i++){
+	    System.out.println(arr[i]); // printing the existing.
+	    }
+	    for (int w = 0; w < 4; w++) {
+         for (int x = 0; x < 4; x++) 
+         {
+            for (int y = 0; y <4; y++) 
+            {
+               for (int z = 0; z < 4; z++) 
+               {
+                  if (w!=x && x != y && y != z && z != x && w!=y && w!=z) 
+                     { 
+                        System.out.println(arr[w]+" "+arr[x]+" "+arr[y]+" "+arr[z]); // printing the combination 
+                     } 
+                  }  
+               }
+         }
+      }
+	}
+}
