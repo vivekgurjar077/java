@@ -1,0 +1,31 @@
+
+import java.util.*;
+public class two_sum {
+    public int[] twoSum(int[] nums, int target) {
+        int sum=0,i,j;
+        int[] result=new int[2];
+        for(i=0;i<nums.length;i++){
+            for(j=i+1;j<nums.length;j++){
+                sum=nums[i]+nums[j];
+                if(sum==target)
+                {
+                    result[0]=i;
+                    result[1]=j;
+                }
+            }
+        }
+        return result;
+    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int target=sc.nextInt(),i;
+        int[] nums=new int[5];
+        for(i=0;i<5;i++)
+            nums[i]=sc.nextInt();
+        two_sum g=new two_sum();
+        int v[] = new int[2];
+        v = g.twoSum(nums, target);
+        for(i=0;i<2;i++)
+            System.out.println(v[i]);
+    }
+}
